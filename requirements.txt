@@ -1,0 +1,27 @@
+********WALLET ADAPTER SOLANA*********
+
+REQUIREMENTS
+
+npm i @solana/wallet-adapter-base
+	@solana/wallet-adapter-react
+	@solana/wallet-adapter-react-ui
+	@solana/wallet-adapter-wallets
+	@solana/web3.js
+
+
+ERRORS
+
+npm i stream stream-browserify crypto-browserify
+
+ADD THIS CODE
+@node_modules/react-scripts/config/webpack.config.js	
+	line 305: 
+
+		resolve: {
+      fallback: {
+        "crypto": require.resolve("crypto-browserify")
+      },
+
+
+add in .env 
+	GENERATE_SOURCEMAP=false
